@@ -6,6 +6,7 @@ import 'dart:isolate';
 
 import 'package:async/async.dart';
 
+// One instance manages one isolate
 class YAJsonIsolate {
   final _receivePort = ReceivePort();
   late final SendPort _sendPort;
@@ -13,6 +14,9 @@ class YAJsonIsolate {
   late final _events = StreamQueue(_receivePort);
   bool _hasStartedInitialize = false;
 
+  /// Initialize the isolate
+  ///
+  /// This method is called automatically when the first method is called. Manually initializing before first json de/encode can improve performance.
   Future<void> initialize() async {
     assert(_hasStartedInitialize == false,
         'initialize() can only be called once per isolate.');
@@ -27,6 +31,9 @@ class YAJsonIsolate {
     _createdIsolate.complete();
   }
 
+  /// Dispose the isolate
+  ///
+  /// This exists the isolate
   Future<void> dispose() async {
     await _createdIsolate.future;
     _sendPort.send(null);
