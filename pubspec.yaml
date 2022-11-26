@@ -1,6 +1,6 @@
 name: yet_another_json_isolate
 description: Create isolates to parse JSON
-version: 1.0.0
+version: 0.0.1
 homepage: https://github.com/supabase-community/json-isolate-dart
 
 environment:
