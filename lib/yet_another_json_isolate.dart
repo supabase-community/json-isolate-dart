@@ -1,8 +1,3 @@
-/// Support for doing something awesome.
-///
-/// More dartdocs go here.
 library yet_another_json_isolate;
 
-export 'src/yet_another_json_isolate_base.dart';
-
-// TODO: Export any libraries intended for clients of this package.
+export 'src/_isolates_io.dart' if (dart.library.html) 'src/_isolates_web.dart';
