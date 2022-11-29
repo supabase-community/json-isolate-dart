@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 class YAJsonIsolate {
-  Future<void> init() async {}
+  Future<void> initialize() async {}
 
   Future<void> dispose() async {}
 
