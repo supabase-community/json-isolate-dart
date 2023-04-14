@@ -1,3 +1,7 @@
+## 1.0.3
+
+- fix: correctly check for web platform
+
 ## 1.0.2
 
 - fix: lower async package version
