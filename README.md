@@ -1,5 +1,8 @@
 # Yet Another Json Isolate
 
+> **Warning**
+> This repository has been moved to the [supabase-flutter repo](https://github.com/supabase/supabase-flutter/tree/main/packages/yet_another_json_isolate).
+
 Dart package for simple JSON parsing using isolates, because the world can never have enough JSON parsers.
 
 ## Usage
